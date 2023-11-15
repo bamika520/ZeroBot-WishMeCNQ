@@ -63,7 +63,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ahsai"            // ahsai tts
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aifalse"          // 服务器监控
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aipaint"          // ai绘图
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"           随机老婆
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"           // 随机老婆
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/alipayvoice"      // 支付宝到账语音
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/autowithdraw"     // 触发者撤回时也自动撤回
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/baidu"            // 百度一下
@@ -106,7 +106,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/jiami"            // 兽语加密
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/jptingroom"       // 日语听力学习材料
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/juejuezi"         // 绝绝子生成器
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/kfccrazythursday"  疯狂星期四
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/kfccrazythursday" 疯狂星期四
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/lolicon"          // lolicon 随机图片
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/magicprompt"      // magicprompt吟唱提示
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/mcfish"           钓鱼模拟器
@@ -122,7 +122,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nsfw"             // nsfw图片识别
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nwife"            // 本地老婆
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/omikuji"          浅草寺求签
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qqwife"           // 一群一天一夫一妻制群老婆
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qqwife"           一群一天一夫一妻制群老婆
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/quan"             // QQ权重查询
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qzone"            // qq空间表白墙
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/realcugan"        // realcugan清晰术
@@ -137,7 +137,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/steam"            steam相关
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tarot"            抽塔罗牌
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tiangou"          // 舔狗日记
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tracemoe"          搜番
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/tracemoe"         搜番
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/translation"      // 翻译
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/vitsnyaru"        // vits猫雷
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/vtbmusic"         // vtb点歌
@@ -226,7 +226,7 @@ func init() {
 	// 直接写死 URL 时，请更改下面第二个参数
 	url := flag.String("u", "ws://127.0.0.1:6700", "Set Url of WSClient.")
 	// 默认昵称
-	adana := flag.String("n", "希儿", "Set default nickname.")
+	adana := flag.String("n", "真寻", "Set default nickname.")
 	prefix := flag.String("p", "/", "Set command prefix.")
 	runcfg := flag.String("c", "", "Run from config file.")
 	save := flag.String("s", "", "Save default config to file and exit.")
@@ -287,7 +287,7 @@ func init() {
 	}
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:       append([]string{*adana}, "亚托莉", "团子", "mika", "爱莉"),
+		NickName:       append([]string{*adana}, "亚托莉", "女儿", "mika", "爱莉"),
 		CommandPrefix:  *prefix,
 		SuperUsers:     sus,
 		RingLen:        *rsz,
